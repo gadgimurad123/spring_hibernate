@@ -9,5 +9,5 @@ public interface UserService {
 
     List<User> listUsers();
 
-    void findUserByCars(String sqlQuery);
+    User findUserByCars(String seriesOfCar);
 }

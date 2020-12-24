@@ -4,7 +4,6 @@ import hiber.config.AppConfig;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
-import org.hibernate.Transaction;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
@@ -46,8 +45,16 @@ public class MainApp {
         }
 
 
-        //TODO: write method for searching User by Car-model/series
-        userService.findUserByCars("777");
+        // Search by car_series
+        User user = userService.findUserByCars("999");
+
+        // Не было написано куда выводить
+        // Для удобства вывел в консоль
+        System.out.println("Id = " + user.getId());
+        System.out.println("First Name = " + user.getFirstName());
+        System.out.println("Last Name = " + user.getLastName());
+        System.out.println("Email = " + user.getEmail());
+        System.out.println("Car = " + user.getCar());
 
         context.close();
     }

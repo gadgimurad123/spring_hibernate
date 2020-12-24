@@ -28,7 +28,7 @@ public class UserServiceImp implements UserService {
 
     @Transactional
     @Override
-    public void findUserByCars(String sqlQuery) {
-        userDao.findUserByCars(sqlQuery);
+    public User findUserByCars(String seriesOfCar) {
+        return userDao.findUserByCars(seriesOfCar);
     }
 }
