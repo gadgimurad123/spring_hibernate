@@ -46,7 +46,7 @@ public class MainApp {
 
 
         // Search by car_series
-        User user = userService.findUserByCars("999");
+        User user = userService.findUserByCars("Mercedes-Benz Y","999");
 
         // Не было написано куда выводить
         // Для удобства вывел в консоль
